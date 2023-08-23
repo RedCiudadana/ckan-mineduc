@@ -28,7 +28,7 @@
   <div class="data-categories-container--light">
     <section aria-labelledby="data-categories-title" class="container data-categories-section text-center">
       <h1 id="data-categories-title">{% trans %}Data categories{% endtrans %}</h1>
-      <p>{% trans %}Selecciona las categorias de tu interés para crear y administrar las colecciones de conjuntos de datos{% endtrans %}</p>
+      <p id="data-categories-description">{% trans %}Selecciona las categorias de tu interés para crear y administrar las colecciones de conjuntos de datos{% endtrans %}</p>
       <div class="data-categories-container">
         {% for group in h.demo_groups() %}
         <a href="{{ h.url_for('group.read', id=group.id) }}" aria-labelledby="category-title-{{ group.id }}"
@@ -90,27 +90,29 @@
     </div>
   </div>
 
-  <section aria-labelledby="recent-datasets-title" class="container data-categories-section text-center">
-    <h1 id="recent-datasets-title">
-      {% trans %}Recently published data{% endtrans %}
-    </h1>
-    <div class="data-categories-container">
-      {% for package in h.demo_latest_packages() %}
-      <a href="{{ h.url_for('dataset.read', id=package.id) }}" aria-labelledby="dataset-title-{{ package.id }}"
-        class="data-category">
-        <h2 id="dataset-title-{{ package.id }}">{{ package.title }}</h2>
-        <p>
-          {% trans count=package.num_resources %} {{ count }} resources {%
-          pluralize %} {{ count }} resources {% endtrans %}
-        </p>
-      </a>
-      {% endfor %}
-      <a class="all-data-link" href="/dataset">
-        {% trans %}See all datasets{% endtrans %}
-        <i class="fa fa-arrow-right" aria-hidden="true" role="presentation"></i>
-      </a>
-    </div>
-  </section>
+  <div class="data-categories-container--light">
+    <section aria-labelledby="recent-datasets-title" class="container data-categories-section text-center">
+      <h1 id="recent-datasets-title">
+        {% trans %}Conjuntos recientes{% endtrans %}
+      </h1>
+      <div class="data-categories-container">
+        {% for package in h.demo_latest_packages() %}
+        <a href="{{ h.url_for('dataset.read', id=package.id) }}" aria-labelledby="dataset-title-{{ package.id }}"
+          class="data-category">
+          <h2 id="dataset-title-{{ package.id }}">{{ package.title }}</h2>
+          <p>
+            {% trans count=package.num_resources %} {{ count }} resources {%
+            pluralize %} {{ count }} resources {% endtrans %}
+          </p>
+        </a>
+        {% endfor %}
+        <a class="all-data-link" href="/dataset">
+          {% trans %}See all datasets{% endtrans %}
+          <i class="fa fa-arrow-right" aria-hidden="true" role="presentation"></i>
+        </a>
+      </div>
+    </section>
+  </div>
 </main>
 
 {% asset 'mineduc/slick-js' %}

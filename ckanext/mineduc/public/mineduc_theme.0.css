@@ -200,9 +200,16 @@ main,
   font-size: 1.25rem;
 }
 
-.slick-carousel .img-container {
-  width: 65vw;
-  height: 20vw;
+.slick-carousel {
+  overflow: hidden;
+  max-width: 65vw;
+  /* max-height: 20vw; */
+  width: 100%;
+}
+
+.slick-carousel img {
+  height: 100%;
+  width: auto;
 }
 
 .slick-carousel-container {
@@ -312,7 +319,7 @@ functions section
 }
 
 .data-categories-container--light {
-  background-color: #f5f9ff;
+  background-color: #ffffff;
   /* box-shadow: 0 0 0 100px #f5f9ff; */
 }
 
@@ -324,11 +331,31 @@ functions section
     "image title"
     "image description";
   justify-content: center;
+  text-align: left;
   gap: 0 10px;
   padding: 20px;
   box-shadow: rgba(0 0 0 / 16%) 0px 10px 20px, rgb(0 0 0 / 16%) 0px 6px 6px;
   border-radius: 8px;
   color: #4a4949;
+}
+
+.data-category p {
+  grid-area: description;
+  margin: 0;
+  font-weight: 400;
+  color: #212f51;
+}
+
+.data-category h2 {
+  /* allow max 2 lines with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-area: title;
+  margin: 0;
+
 }
 
 .data-categories-container--light .data-category {
@@ -337,6 +364,22 @@ functions section
 
 .data-category:hover {
   text-decoration: none;
+  color: white;
+  background-color: #6c5a8a;
+}
+
+.data-category:hover h1,
+.data-category:hover h2,
+.data-category:hover h3,
+.data-category:hover h4,
+.data-category:hover h5,
+.data-category:hover h6
+{
+  color: white;
+}
+
+#data-categories-description {
+  margin-bottom: 4rem;
 }
 
 .data-category img {
@@ -394,24 +437,6 @@ functions section
 .summary p {
   font-weight: 100;
   font-size: 40px;
-}
-
-.data-category p {
-  grid-area: description;
-  margin: 0;
-  font-weight: 100;
-}
-
-.data-category h2 {
-  /* allow max 2 lines with ellipsis */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  grid-area: title;
-  margin: 0;
-
 }
 
 .all-data-link {
@@ -524,6 +549,7 @@ functions section
 }
 
 .social-media-sidebar {
+  display: none;
   position: fixed;
   background-color: #1486c0;
   color: white;
@@ -571,4 +597,9 @@ functions section
 
 .data-categories-container--light p {
   margin-bottom: 1rem;
+}
+
+
+#recent-datasets-title {
+  margin-bottom: 4rem;
 }
