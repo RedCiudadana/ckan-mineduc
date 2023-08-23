@@ -1,0 +1,23 @@
+slick-js:
+  filter: rjsmin
+  output: ckanext-mineduc/%(version)s-slick.js
+  contents:
+    - js/slick.min.js
+  extra:
+    preload:
+      - base/main
+
+mineduc-js:
+  filter: rjsmin
+  output: ckanext-mineduc/%(version)s-mineduc.js
+  contents:
+    - js/mineduc.js
+  extra:
+    preload:
+      - base/main
+
+# mineduc-css:
+#   filter: cssrewrite
+#   output: ckanext-mineduc/%(version)s-mineduc.css
+#   contents:
+#     - css/mineduc.css

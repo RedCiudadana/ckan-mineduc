@@ -1,0 +1,169 @@
+# Spanish translations for ckanext-demo.
+# Copyright (C) 2022 ORGANIZATION
+# This file is distributed under the same license as the ckanext-demo
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-mineduc 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-10-08 14:04+0000\n"
+"PO-Revision-Date: 2022-08-20 16:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+
+#: ckanext/mineduc/templates/footer.html:8
+msgid "Site logo"
+msgstr "Logo del sitio"
+
+#: ckanext/mineduc/templates/footer.html:13
+msgid "The centralized portal of government data"
+msgstr "El portal centralizado de datos de gobierno"
+
+#: ckanext/mineduc/templates/footer.html:43 ckanext/mineduc/templates/header.html:5
+#| msgid "Search datasets"
+msgid "Datasets"
+msgstr "Conjuntos de datos"
+
+#: ckanext/mineduc/templates/footer.html:44
+msgid "Organizations"
+msgstr "Organizaciones"
+
+#: ckanext/mineduc/templates/footer.html:45
+#| msgid "Data categories"
+msgid "Categories"
+msgstr "Categorías de datos"
+
+#: ckanext/mineduc/templates/footer.html:46
+msgid "Documents"
+msgstr "Documentos"
+
+#: ckanext/mineduc/templates/footer.html:47
+msgid "Help"
+msgstr "Ayuda"
+
+#: ckanext/mineduc/templates/footer.html:48
+msgid "Featured initiatives"
+msgstr "Iniciativas destacadas"
+
+#: ckanext/mineduc/templates/footer.html:77
+msgid "Developed by civil association Red Ciudadana®"
+msgstr "Desarrollado por Asociación Civil Red Ciudadana®"
+
+#: ckanext/mineduc/templates/header.html:5
+msgid "Home"
+msgstr "Inicio"
+
+#: ckanext/mineduc/templates/header.html:10
+msgid "About"
+msgstr "Acerca de"
+
+#: ckanext/mineduc/templates/home/index.html:4
+msgid "Welcome"
+msgstr "Bienvenido"
+
+#: ckanext/mineduc/templates/home/layout1.html:20
+msgid "Functions"
+msgstr "Funciones"
+
+#: ckanext/mineduc/templates/home/layout1.html:24
+msgid "Publish"
+msgstr "Publica"
+
+#: ckanext/mineduc/templates/home/layout1.html:26
+msgid "Makes data of public interest available in different formats"
+msgstr "Pone a disposición datos en formatos de interés ciudadanos"
+
+#: ckanext/mineduc/templates/home/layout1.html:32
+msgid "Download"
+msgstr "Descarga"
+
+#: ckanext/mineduc/templates/home/layout1.html:34
+msgid "Quick and easy download of data in many formats"
+msgstr "Rápida y fácil descarga de datos en diferentes formatos"
+
+#: ckanext/mineduc/templates/home/layout1.html:40
+msgid "API"
+msgstr "API"
+
+#: ckanext/mineduc/templates/home/layout1.html:42
+msgid "The portal includes an API to facilitate data consumption by third-parties"
+msgstr "El portal de datos abiertos pone a disposición APIs para facilitar el consumo de recursos disponibles por reutilizadores de datos"
+
+#: ckanext/mineduc/templates/home/layout1.html:53
+msgid "Data categories"
+msgstr "Categorías de datos"
+
+#: ckanext/mineduc/templates/home/layout1.html:66
+#, python-format
+msgid "%(count)s dataset"
+msgid_plural "%(count)s datasets"
+msgstr[0] "%(count)s conjunto de datos"
+msgstr[1] "%(count)s conjuntos de datos"
+
+#: ckanext/mineduc/templates/home/layout1.html:72
+msgid "See all categories"
+msgstr "Ver todas las categorías"
+
+#: ckanext/mineduc/templates/home/layout1.html:85
+msgid "Recently published data"
+msgstr "Conjuntos recientes"
+
+#: ckanext/mineduc/templates/home/layout1.html:96
+msgid "%(count)s resources"
+msgid_plural "%(count)s resources"
+msgstr[0] "%(count)s recurso"
+msgstr[1] "%(count)s recursos"
+
+#: ckanext/mineduc/templates/home/layout1.html:102
+msgid "See all datasets"
+msgstr "Buscar conjuntos de datos"
+
+#: ckanext/mineduc/templates/home/snippets/promoted.html:6
+msgid ""
+"This is a nice introductory paragraph about CKAN or the site in general. "
+"We don't have any copy to go here yet but soon we will"
+msgstr ""
+
+#: ckanext/mineduc/templates/home/snippets/search.html:2
+msgid "E.g. environment"
+msgstr "e.g. Ambiente"
+
+#: ckanext/mineduc/templates/home/snippets/search.html:12
+msgid "Search datasets"
+msgstr "Buscar conjuntos de datos"
+
+#: ckanext/mineduc/templates/home/snippets/search.html:19
+msgid "What data do you need?"
+msgstr "¿Qué datos necesitas?"
+
+#: ckanext/mineduc/templates/home/snippets/search.html:23
+msgid "Search"
+msgstr "Buscar"
+
+#: ckanext/mineduc/templates/home/snippets/search.html:28
+msgid "Popular tags"
+msgstr "Búsquedas populares"
+
+#~ msgid ""
+#~ "<strong>Powered by</strong> <a class=\"hide-"
+#~ "text ckan-footer-logo\" "
+#~ "href=\"http://ckan.org\">CKAN</a >"
+#~ msgstr ""
+
+#~ msgid "About {0}"
+#~ msgstr "Acerca {0}"
+
+#~ msgid "CKAN API"
+#~ msgstr "CKAN API"
+
+#~ msgid "CKAN Association"
+#~ msgstr "Asociación CKAN"
+

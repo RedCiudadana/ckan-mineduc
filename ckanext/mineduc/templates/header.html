@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+<!-- Navigation tabs -->
+{% block header_site_navigation_tabs %}
+  {{ h.build_nav_main(
+      ('home.index', _('Home')),
+      ('dataset.search', _('Datasets')),
+      ('home.about', _('About')),
+      ('user.login', _('Log in'))
+    ) 
+  }}
+{% endblock %}
+
+{% block header_site_search %}
+{% endblock %}

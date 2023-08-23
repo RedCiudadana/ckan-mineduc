@@ -1,0 +1,117 @@
+<main>
+  <div class="main hero">
+    <!-- <div class="container promoted">
+      promoted
+    </div> -->
+    <div class="container">
+      {% block search %}
+        <div class="row">
+          <div class="col-12 col-md-4">
+            {% block promoted %}
+              {% snippet 'home/snippets/promoted.html' %}
+            {% endblock %}
+            {% snippet 'home/snippets/search.html' %}
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="slick-carousel">
+              <img src="/slider/IMG_9818.JPG" alt="">
+              <img src="/slider/20220826082541_IMG_7556.JPG" alt="">
+              <img src="/slider/IMG_9801.JPG" alt="">
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+  </div>
+  <div style="display: none">{{ h.demo_groups() }}</div>
+
+  <div class="data-categories-container--light">
+    <section aria-labelledby="data-categories-title" class="container data-categories-section text-center">
+      <h1 id="data-categories-title">{% trans %}Data categories{% endtrans %}</h1>
+      <p>{% trans %}Selecciona las categorias de tu interés para crear y administrar las colecciones de conjuntos de datos{% endtrans %}</p>
+      <div class="data-categories-container">
+        {% for group in h.demo_groups() %}
+        <a href="{{ h.url_for('group.read', id=group.id) }}" aria-labelledby="category-title-{{ group.id }}"
+          class="data-category">
+          {% if group.image_url %}
+          <img src="{{ group.image_display_url }}" />
+          {% endif %}
+          <h2 id="category-title-{{ group.id }}">{{ group.display_name }}</h2>
+          <p>
+            {% trans count=group.package_count %} {{ count }} dataset {% pluralize
+            %} {{ count }} datasets {% endtrans %}
+          </p>
+        </a>
+        {% endfor %}
+        <a class="all-data-link" href="/group">
+          {% trans %}See all categories{% endtrans %}
+          <i class="fa fa-arrow-right" aria-hidden="true" role="presentation"></i>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 id="recent-datasets-title">
+            {% trans %}Funciones{% endtrans %}
+          </h1>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+          <div class="image-container">
+            <img src="/icono-maletin.png" alt="Maletin" style="width: 18rem;">
+          </div>
+          <div class="text-container">
+            <h3>Publica</h3>
+            <p>Pone a disposición datos en formatos en interés ciudadanos</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+          <div class="image-container">
+            <img src="/icono-lapiceros.png" alt="Lapiceros" style="width: 18rem;">
+          </div>
+          <div class="text-container">
+            <h3>Descarga</h3>
+            <p>Rápida y fácil descarga de datos en diferentes formatos</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 text-center">
+          <div class="image-container">
+            <img src="/icono-api.png" alt="API" style="width: 18rem;">
+          </div>
+          <div class="text-container">
+            <h3>API</h3>
+            <p><strong>El portal de datos cuenta con una API</strong> para facilitar el consumo de recursos disponibles por parte de los reutilizadores de datos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section aria-labelledby="recent-datasets-title" class="container data-categories-section text-center">
+    <h1 id="recent-datasets-title">
+      {% trans %}Recently published data{% endtrans %}
+    </h1>
+    <div class="data-categories-container">
+      {% for package in h.demo_latest_packages() %}
+      <a href="{{ h.url_for('dataset.read', id=package.id) }}" aria-labelledby="dataset-title-{{ package.id }}"
+        class="data-category">
+        <h2 id="dataset-title-{{ package.id }}">{{ package.title }}</h2>
+        <p>
+          {% trans count=package.num_resources %} {{ count }} resources {%
+          pluralize %} {{ count }} resources {% endtrans %}
+        </p>
+      </a>
+      {% endfor %}
+      <a class="all-data-link" href="/dataset">
+        {% trans %}See all datasets{% endtrans %}
+        <i class="fa fa-arrow-right" aria-hidden="true" role="presentation"></i>
+      </a>
+    </div>
+  </section>
+</main>
+
+{% asset 'mineduc/slick-js' %}
+{% asset 'mineduc/mineduc-js' %}

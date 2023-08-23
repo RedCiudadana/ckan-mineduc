@@ -1,0 +1,102 @@
+<!-- sticky socia media -->
+<div class="social-media-sidebar">
+  <div class="social-media">
+    <a aria-label="facebook" href="https://www.facebook.com/MinisteriodeSaludPublicayAsistenciaSocial/"
+      rel="noopener noreferrer">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a aria-label="twitter" href="https://twitter.com/MinSaludGuate/" rel="noopener noreferrer">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a aria-label="youtube" href="https://www.youtube.com/c/MSPASguate" rel="noopener noreferrer">
+      <i class="fa fa-youtube"></i>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="site-footer">
+    <div class="container">
+      {% block footer_content %}
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="footer-images">
+            <a href="{{ h.url_for('home.index') }}" class="footer-logo">
+              <img
+                src="{{ h.url_for_static_or_external(g.site_logo) }}"
+                alt="{{ g.site_title }}"
+                title="{{ g.site_title }}"
+              />
+            </a>
+          </div>
+          <p>
+            <!-- Portal de Datos Abiertos del Ministerio de Salud Pública Y Asistencia Social -->
+          </p>
+          <div class="social-media">
+            <a
+              aria-label="facebook"
+              href="https://www.facebook.com/MinisteriodeSaludPublicayAsistenciaSocial/"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a
+              aria-label="twitter"
+              href="https://twitter.com/MinSaludGuate/"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a
+              aria-label="youtube"
+              href="https://www.youtube.com/c/MSPASguate"
+              rel="noopener noreferrer"
+            >
+              <i class="fa fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 footer-links">
+          {% block footer_nav %}
+          <strong>Secciónes</strong>
+          <ul class="list-unstyled">
+            {{ h.build_nav('dataset.search', _('Datasets')) }}
+            <!-- Organizaciones -->
+            {{h.build_nav('organization.index', _('Organizations')) }}
+            {{h.build_nav('group.index', _('Categories')) }}
+            <!-- Documentos -->
+            {{ h.build_nav('home.about', _('Help')) }}
+          </ul>
+
+          {% endblock %}
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <strong>Enlaces externos</strong>
+          <ul class="list-unstyled">
+            <li><a target="_blank" href="https://establecimientosdesalud.mineduc.gob.gt/">Establecimientos de salud</a></li>
+            <li><a target="_blank" href="https://www.mineduc.gob.gt/servicios">Servicios</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <strong>Ayuda institucional</strong>
+          <ul class="list-unstyled">
+            <li><a target="_blank" href="https://www.mineduc.gob.gt/institucional/contactenos">Ingreso de solicitud de ayuda</a></li>
+          </ul>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+
+  <div class="footer-credits-container">
+    <div class="footer-credits container">
+      <img src="/redciudadana.png" />
+      <p>
+        {% trans %}Developed by civil association Red Ciudadana®{% endtrans %}
+      </p>
+    </div>
+  </div>
+
+  {% block footer_debug %} {% if g.debug %} {% include 'snippets/debug.html' %}
+  {% endif %} {% endblock %}
+</footer>
