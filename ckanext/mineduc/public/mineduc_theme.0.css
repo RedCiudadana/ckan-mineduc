@@ -202,14 +202,19 @@ main,
 
 .slick-carousel {
   overflow: hidden;
-  max-width: 65vw;
-  /* max-height: 20vw; */
   width: 100%;
+  max-width: calc(100vw - 30px);
+}
+
+@media (min-width: 992px) {
+  .slick-carousel {
+    max-width: 65vw;
+  }
 }
 
 .slick-carousel img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 
 .slick-carousel-container {
