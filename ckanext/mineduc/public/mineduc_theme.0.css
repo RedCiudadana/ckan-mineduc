@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main,
 .main {
-  background: #e7e9ed;
+  background: #e7e9ed !important;
   color: #494949;
   padding: 0;
 }
@@ -50,9 +50,6 @@ main,
 
 .account-masthead .account ul li {
   border-left: 1px solid white;
-}
-.account-masthead .account ul li a {
-  color: white;
 }
 
 .account-masthead .account ul li a:hover,
@@ -68,22 +65,26 @@ main,
 }
 
 .masthead .nav > li > a
-/* .masthead .nav > li > a:focus,
-.masthead .nav > li > a:hover,
-.masthead .nav > .active > a,
-.masthead .nav > .active > a:hover,
-.masthead .nav > .active > a:focus */
 {
-  color: #4a4949;
+  color: #4a4949 !important;
   font-weight: 500;
 }
 
+.account-masthead .account ul li a {
+  color: white !important;
+}
+
+.masthead .nav > li > a:focus,
+.masthead .nav > li > a:hover,
+.masthead .nav > .active > a,
+.masthead .nav > .active > a:hover,
+.masthead .nav > .active > a:focus,
 .masthead .navigation .nav-pills li a:hover,
 .masthead .navigation .nav-pills li a:focus
 /* .masthead .navigation .nav-pills li.active a */
 {
-  color: white;
-  background-color: #212f51;
+  color: white !important;
+  background-color: #212f51 !important;
 }
 
 /* hero */
