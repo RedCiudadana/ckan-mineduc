@@ -64,9 +64,10 @@ main,
   color: #4a4949;
 }
 
-.masthead .nav > li > a
+.masthead .nav > li > a,
+.masthead .main-navbar ul li a
 {
-  color: #4a4949 !important;
+  color: #212f51 !important;
   font-weight: 500;
 }
 
@@ -80,11 +81,15 @@ main,
 .masthead .nav > .active > a:hover,
 .masthead .nav > .active > a:focus,
 .masthead .navigation .nav-pills li a:hover,
-.masthead .navigation .nav-pills li a:focus
+.masthead .navigation .nav-pills li a:focus,
 /* .masthead .navigation .nav-pills li.active a */
+/* boostrap 5 */
+.masthead .main-navbar ul li:hover a,
+.masthead .main-navbar ul li:focus a, .masthead .main-navbar ul li.active a 
 {
   color: white !important;
   background-color: #212f51 !important;
+  border-radius: 20px;
 }
 
 /* hero */
@@ -144,6 +149,11 @@ main,
 .search-form .form-control
 {
   border: unset;
+}
+
+.search-form .search-input.search-giant button i {
+  background: white;
+  padding: 1px;
 }
 
 .hero-bar {
@@ -379,7 +389,8 @@ functions section
 .data-category:hover h3,
 .data-category:hover h4,
 .data-category:hover h5,
-.data-category:hover h6
+.data-category:hover h6,
+.data-category:hover p
 {
   color: white;
 }
